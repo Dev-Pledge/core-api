@@ -22,6 +22,7 @@ push-core-api:
 
 run-core-api-dev:
 	docker run -d \
+	--name dp-core-api
 	--mount type=bind,source="$(PWD)",target=/var/www \
 	-p 127.0.0.1:$(PHP_FPM_PORT):9000 \
 	devpledge/core-api:${VERSION}
