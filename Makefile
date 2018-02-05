@@ -24,14 +24,14 @@ run-core-api-dev:
 	docker run -d \
 	--name dp-core-api \
 	--mount type=bind,source="$(PWD)",target=/var/www \
-	-p 127.0.0.1:$(PHP_FPM_PORT):9000 \
+	-p $(PHP_FPM_PORT):9000 \
 	devpledge/core-api:${VERSION}
 
 run-api-prod:
 	docker run -d \
 	--name dp-core-api \
 	--mount type=bind,source="$(PWD)/.env",target=/var/www/.env \
-	-p 127.0.0.1:$(PHP_FPM_PORT):9000 \
+	-p $(PHP_FPM_PORT):9000 \
 	devpledge/core-api:${VERSION}
 
 build-web:
@@ -44,7 +44,7 @@ push-web:
 run-web:
 	docker run -d \
 	--name dp-core-api-web \
-	-p 127.0.0.1:$(NGINX_PORT):80 \
+	-p $(NGINX_PORT):80 \
 	--link dp-core-api:api \
 	devpledge/core-api-web:${VERSION}
 
