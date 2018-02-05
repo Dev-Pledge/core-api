@@ -27,7 +27,7 @@ run-core-api-dev:
 	-p $(PHP_FPM_PORT):9000 \
 	devpledge/core-api:${VERSION}
 
-run-api-prod:
+run-core-api-prod:
 	docker run -d \
 	--name dp-core-api \
 	--mount type=bind,source="$(PWD)/.env",target=/var/www/.env \
