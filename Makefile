@@ -45,6 +45,6 @@ run-web:
 	docker run -d \
 	--name dp-core-api-web \
 	-p 127.0.0.1:$(NGINX_PORT):80 \
-	--link rh-api:rh-api \
+	--link dp-core-api:api \
 	devpledge/core-api-web:${VERSION}
 
