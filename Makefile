@@ -35,7 +35,7 @@ run-api-prod:
 	devpledge/core-api:${VERSION}
 
 build-web:
-	docker build -t devpledge/core-api-web:${TAG} -f ./docker/web.dockerfile . \
+	docker build -t devpledge/core-api-web:${TAG} -f ./web.dockerfile . \
 	&& docker tag devpledge/core-api-web:${TAG} devpledge/core-api-web:latest
 
 push-web:
