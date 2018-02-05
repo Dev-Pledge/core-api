@@ -1,0 +1,12 @@
+{
+    "name": "devpledge/core-api",
+    "description": "DevPledge's core api",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jim Wright",
+            "email": "jim@linx.net"
+        }
+    ],
+    "require": {}
+}
